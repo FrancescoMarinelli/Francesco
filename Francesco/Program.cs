@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Dynamic;
 
 namespace Francesco
 {
@@ -7,16 +6,21 @@ namespace Francesco
     {
         static void Main(string[] args)
         {
-            int Num = 1024, resto;
+            int resto, ottagonale;
             string binario = "";
-            while (Num > 0)
+            Console.WriteLine("inserisci il numero da convertire");
+            ottagonale = Convert.ToInt32(Console.ReadLine());
+           while(ottagonale > 0)
             {
-                resto = Num % 2;
-                Num /= 2;
+                resto = ottagonale % 8;
+                ottagonale = ottagonale / 8;
                 binario = Convert.ToString(resto) + binario;
             }
-            Console.WriteLine($"il numero è {binario}");
+            Console.WriteLine($"il numero binario è {binario}");
             Console.ReadLine();
+   
+            
+            
 
 
 
